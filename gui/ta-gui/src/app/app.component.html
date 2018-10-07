@@ -4,11 +4,11 @@
   .corpo {
       background-color: rgba(255, 255, 255, 0.5);
       color: black;
-      padding: 10px 10px 100px 10px;
+      padding: 10px 10px 100px 500px;
       margin: 30px 100px 0px 100px;
   }
   body {
-    background-image: url("images/ursal.png");
+    background-image: url("images/red.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -30,7 +30,7 @@
   <div class = "Corpo">
     <html (mousemove)="onMove()">
       <h1>
-        Teaching Assistant Plano Ursal
+        Teaching Assistant Centro de Informatica - UFPE
       </h1>
       
       <h2>
@@ -39,32 +39,42 @@
       
       <table>
       <tr>
-         <td><label>Nome do Cristão </label></td>
+         <td><label>Nome do Aluno </label></td>
          <td><input [(ngModel)]="aluno.nome" ></td>
          
       </tr>
       <tr>
+          <td><label>Login </label></td>
+          <td><input [(ngModel)]="aluno.nome" ></td>
+          
+       </tr>
+      <tr>
          <td><label>CPF </label></td>
          <td><input [(ngModel)]="aluno.cpf" ></td>
-         <td *ngIf="cpfduplicado">
-           Já existe um aluno com esse CPF
-         </td>
+        
       </tr>
       <tr>
          <td><label>E-mail </label></td>
          <td><input [(ngModel)]="aluno.email" ></td>
       </tr>
       <tr>
-        <td><label>Quem é o seu presidente :      </label></td>
-        <td>Opção 1: <input type="checkbox"> Cabo Daciolo </td>
+        <td><label>Tipo de Vínculo :      </label></td>
+        <td><input type="checkbox"> Graduação </td>
      </tr>
      <tr>
        <td></td>
-      <td> Opção 2: <input type="checkbox"> Opção 1 </td>
+      <td><input type="checkbox"> Pós-Graduação </td>
       </tr>
       <tr>
-          <td><button class="button" (click)="criarAluno(aluno)">Glória a Deus - Adicionar</button></td>
+          <tr>
+              <td></td>
+             <td><input type="checkbox"> Outro </td>
+             </tr>
+             <tr>
+          
       </tr>
+      <tr></tr>
+      <tr><td><button class="button" (click)="criarAluno(aluno)">Adicionar Aluno</button></td></tr>
       </table>
       
       <metas [alunos]="alunos"></metas>
